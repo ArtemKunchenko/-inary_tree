@@ -79,15 +79,17 @@ bool Tree<T>::find(T key)
 }
 
 template<class T>
-void Tree<T>::rfs(Node* root, T key)
+void Tree<T>::rfs(Node* root, T key_)
 {
 	if (root != nullptr)
 	{
-		rfs(root->right, key);
-		if (root->data == key) found = true;
-		rfs(root->left, key);
+		rfs(root->right, key_);
+		if (root->data == key_) found = true;
+		rfs(root->left, key_);
 	}
 }
+
+
 
 template<class T>
 void Tree<T>::printMaxMinSupport(Node* root)

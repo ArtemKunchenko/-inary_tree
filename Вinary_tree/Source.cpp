@@ -5,25 +5,18 @@
 int main()
 {
 	Tree<int> tree;
-	//Iteration
-	//tree.addIteratively(2); // Root
-	//tree.addIteratively(1);
-	//tree.addIteratively(4);
-	//tree.addIteratively(3);
-	// Recursively
-	tree.addRecursively(2); // Root
-	tree.addRecursively(1);
-	tree.addRecursively(4);
-	tree.addRecursively(3);
-
-	// Recursive print
-	cout << "min -> max:" << endl;
-	tree.printMinMax();
-	cout << "max -> min:" << endl;
-	tree.printMaxMin();
-	//find
-	if (tree.find(15)) cout << "found" << endl;
-	else cout << "Not found" << endl;
-
+	
+	tree.addIteratively(8);
+	tree.addIteratively(3);
+	tree.addIteratively(10);
+	tree.addIteratively(1);
+	tree.addIteratively(6);
+	tree.addIteratively(14);
+	tree.addIteratively(4);
+	tree.addIteratively(7);
+	tree.addIteratively(13);
+	
+	tree.startLCA(1, 14);
+	system("pause");
 	return 0;
 }
